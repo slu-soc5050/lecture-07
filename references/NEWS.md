@@ -1,4 +1,4 @@
-# lecture-07 v18.1.0.9000
+# lecture-07 v18.1.0
 
 * Initial repo setup:
     * Add `.github/` directory with community documents
@@ -12,3 +12,4 @@
 
 * Update `.github/` documents to latest community standards
 * Add `remotes` and `usethis` packages as dependencies
+* Add lecture prep and replication
