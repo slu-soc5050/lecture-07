@@ -1,3 +1,10 @@
+# lecture-07 v18.2.0
+
+* Add lecture handouts (both `pdf` and `.tex`)
+* Add example functions for both lecture and for assignments
+* Add learning outcomes to `README`
+* Add assignment handouts
+
 # lecture-07 v18.1.0
 
 * Initial repo setup:
