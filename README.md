@@ -1,19 +1,22 @@
 lecture-07 <img src="https://slu-soc5050.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-fall%202018-orange.svg)](https://github.com/slu-soc5050/lecture-07)
-[![](https://img.shields.io/badge/release-lp%20only-red.svg)](https://github.com/slu-soc5050/lecture-07)
-[![](https://img.shields.io/github/release/slu-soc5050/lecture-04.svg?label=version)](https://github.com/slu-soc5050/lecture-07/releases)
+[![](https://img.shields.io/badge/release-lecture-orange.svg)](https://github.com/slu-soc5050/lecture-07)
+[![](https://img.shields.io/github/release/slu-soc5050/lecture-07.svg?label=version)](https://github.com/slu-soc5050/lecture-07/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5050/lecture-07.svg)](https://github.com/slu-soc5050/lecture-07/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5050/lecture-07.svg)](https://github.com/slu-soc5050/lecture-07)
 [![Travis-CI Build Status](https://travis-ci.org/slu-soc5050/lecture-07.svg?branch=master)](https://travis-ci.org/slu-soc5050/lecture-07)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-soc5050/lecture-07?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/lecture-07)
 
-This is the repository for Lecture 07 of the Saint Louis University course SOC 4015/5050 - Quantitative Analysis. This lecture introduces the theory behind difference of means testing and the formulae for calculating difference of means tests by hand.
+This is the repository for Lecture 07 of the Saint Louis University course SOC 4015/5050 - Quantitative Analysis. This lecture introduces the theory behind difference of means testing and the formulae for calculating difference of means tests by hand. The basics of function construction in `R` are also discussed.
 
 ### Lecture Objectives
 At the end of this lecture and its corresponding assignments, students should be able to:
 
-1.
+1. Construct a basic `R` function that takes multiple arguments and returns a numeric value.
+2. Discuss the issues surrounding equal and unequal variance (homo- and herteroskedasticity) as it relates to difference of unequal variance.
+3. Describe the logic of difference of means testing.
+4. Employ formulae to calculate a variety of difference of means tests by hand, including one-sample, independent sample, and dependent sample t tests.
 
 ### Lecture Resources
 
