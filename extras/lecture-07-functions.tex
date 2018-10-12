@@ -1,0 +1,94 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% indent subsections
+\newenvironment{subs}
+  {\adjustwidth{3em}{0pt}}
+  {\endadjustwidth}
+
+
+% ============================================================
+
+% define the title
+\title{SOC 4015/5050: Lecture 07 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{base}
+\item \texttt{stats}
+\end{itemize}
+
+\vspace{3mm}
+\section{Writing a Function}
+\noindent {\color{red}\texttt{\textit{functionName}}}\texttt{ <- base::}{\color{red}\texttt{function}}\texttt{(\textit{param1}, \textit{param2})\{}\\
+\texttt{\textit{\# function body}}\\
+\noindent \texttt{\}}
+
+\vspace{5mm}
+\section{Calculating Absolute Value}
+\texttt{stats::}{\color{red}\texttt{abs}}\texttt{(\textit{x})}
+
+\vspace{5mm}
+\section{t Distribution}
+For the \textit{t} distribution, let: \\
+\noindent $t =$ score\\
+\noindent $df =$ degrees of freedom\\
+
+\begin{subs}
+
+\vspace{3mm}
+\subsection{Basic Function}
+\noindent \texttt{stats::}{\color{red}\texttt{pt}}\texttt{(q = \textit{t}, df = \textit{df})}\\
+
+\vspace{3mm}
+\subsection{Full Equation}
+\noindent \texttt{2*stats::}{\color{red}\texttt{pt}}\texttt{(q = -stats::{\color{red} abs}(\textit{t}), df = \textit{df})}
+
+\end{subs}
+
+\newpage
+\section{The Full Probability Under t Function}
+\begin{verbatim}
+#' Two-tailed Probabilities Under the t Distribution
+#' 
+#' @description This function calculates the probability of observing a t score
+#'     at least as extreme as the given t value.
+#'     
+#' @param t A given t score
+#' @param n The sample size associated with t
+#'
+#' @return A probability value     
+#'      
+probt <- function(t, n){
+ 
+  # calculate the degrees of freedom given n
+  df <- n-1
+  
+  # calculate the p value
+  out <- 2*pt(q = -abs(t), df = df)
+  
+  # return output
+  return(out)
+   
+}
+\end{verbatim}
+
+
+% ============================================================
+\end{document}

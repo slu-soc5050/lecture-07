@@ -1,0 +1,94 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+\usepackage{amsmath}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% create environment for bottom paragraph:
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+% ============================================================
+
+% define the title
+\title{SOC 4015/5050: Lecture 07 Equations}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{One-sample T-test}\marginnote{Degrees of freedom ($v$) is defined as $v=n-1$.}
+\begin{equation}
+\scalebox{2} {$ t=\frac { \bar { x } - \mu }{ \frac{s}{\sqrt{n}} }  $}
+\end{equation}
+
+\vspace{5mm}
+\section{Independent T-test, Homogeneous Variance}
+\begin{subequations}
+\paragraph{Independent T-test}\marginnote{Degrees of freedom ($v$) is defined as $v={n}_{a}+{n}_{b}-2$.}
+\begin{equation}
+\scalebox{2} {$ t=\frac { { \bar{X}  }_{ a }-{ \bar{X}  }_{ b } }{ \sqrt{\frac{{ s }_{ p }^{ 2 }}{{ n }_{ a }}+\frac{{ s }_{ p }^{ 2 }}{{ n }_{ b }}} } $}
+\end{equation}
+
+\vspace{3mm}
+\paragraph{Pooled Variance}
+\begin{equation}
+\scalebox{2} {$ { s }_{ p }^{ 2 }=\frac{\left({n}_{a}-1\right){s}_{a}^{2}+\left({n}_{b}-1\right){s}_{b}^{2}}{{n}_{a}+{n}_{b}-2} $}
+\end{equation}
+\end{subequations}
+
+\vspace{5mm}
+\section{Independent T-test, Heterogeneous Variance}
+\begin{subequations}
+\paragraph{Independent T-test}
+\begin{equation}
+\scalebox{2} {$ t=\frac { { \bar{x}  }_{ a }-{ \bar{x}  }_{ b } }{ \sqrt{\frac{{ s }_{ a }^{ 2 }}{{ n }_{ a }}+\frac{{ s }_{ b }^{ 2 }}{{ n }_{ b }}} } $}
+\end{equation}
+
+\vspace{3mm}
+\paragraph{Welch's Corrected Degrees of Freedom ($v$)}
+\begin{equation}
+\scalebox{2} {$ v\approx \frac { \left( \frac { { s }_{ a }^{ 2 } }{ { n }_{ a } } +\frac { { s }_{ b }^{ 2 } }{ { n }_{ b } }  \right) ^{ 2 } }{ \frac { { s }_{ a }^{ 4 } }{ \left( { n }_{ a }^{2} \right)\left( { n }_{ a }-1 \right) } +\frac { { s }_{ b }^{ 4 } }{ \left( { n }_{ b }^{2} \right)\left( { n }_{ b }-1 \right) }  } $}
+\end{equation}
+\end{subequations}
+
+\vspace{5mm}
+\section{Dependent T-test}
+\begin{equation}
+\scalebox{2} {$ t=\frac{\bar{d}}{\sqrt{\frac{{s}_{d}^{2}}{n}}} $}
+\end{equation}
+
+\vspace{5mm}
+\section{Cohen's $D$}\marginnote{Note that groups $t$ and $c$ are defined for controlled experiments where $t=treatment$ and $c=control$. This can be applied to the above equations by defining $t=a$ and $c=b$.}
+\begin{subequations}
+\paragraph{General Equation}
+\begin{equation}
+\scalebox{2} {$ d=\frac{ { \bar{x}  }_{ a }-{ \bar{x}  }_{ b }}{\sqrt{\frac{\left({n}_{a}-1\right){s}_{a}^{2}+\left({n}_{b}-1\right){s}_{b}^{2}}{{n}_{a}+{n}_{b}-2}}} $}
+\end{equation}
+
+\vspace{3mm}
+\paragraph{Cohen's $D$ after T-test, ${n}_{a}={n}_{b}$}
+\begin{equation}
+\scalebox{2} {$ d=\frac{2t}{\sqrt{v}} $}
+\end{equation}
+
+\vspace{3mm}
+\paragraph{Cohen's $D$ after T-test, ${n}_{a}\neq{n}_{b}$}
+\begin{equation}
+\scalebox{2} {$ d=\frac{t\left({n}_{a}+{n}_{b}\right)}{\sqrt{v}\left(\sqrt{{n}_{a}+{n}_{b}} \right)} $}
+\end{equation}
+\end{subequations}
+
+% ============================================================
+\end{document}
